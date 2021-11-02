@@ -1,0 +1,94 @@
+.app-tabs {
+	.container-wrap  {
+		padding: 280px 0 175px;
+
+		@media(max-width: 991px) {
+			padding: 130px 0 175px;
+		}
+	}
+}
+
+.tabs-three {
+	#pix-tabs-nav {
+		text-align: left;
+		width: 300px;
+
+		@media(max-width: 991px) {
+			margin-bottom: 60px;
+
+		}
+
+		li {
+			display: block;
+			margin-right: 0;
+
+
+			a {
+				box-shadow: 0px 4px 6px 0px rgba(1, 51, 32, 0.06);
+				background: #fff;
+				color: #76747f;
+				display: block;
+				margin-bottom: 10px;
+				font-weight: 500;
+				font-size: 16px;
+
+				i {
+					margin-right: 5px;
+					vertical-align: -1px;
+				}
+			}
+
+			&.active {
+				a {
+					color: $color__theme-6;
+					box-shadow: 0px 20px 40px 0px rgba(1, 51, 32, 0.1);
+				}
+			}
+		}
+	}
+}
+
+.download-tab-content {
+	padding-top: 30px;
+	.section-title {
+		margin-bottom: 40px;
+	}
+}
+
+.tabs-content-wrapper {
+	position: relative;
+
+	.job-board-tabs-content {
+		position: relative;
+		z-index: 2;
+	}
+
+	.tab-bg-shape-wrapper {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		width: 100%;
+
+		@media(max-width: 768px) {
+			display: none;
+		}
+
+		.dot, svg {
+			position: absolute;
+		}
+
+		.dot {
+			top: -35px;
+			height: 160px;
+			width: 180px;
+			left: 160px;
+		}
+
+		svg {
+			right: -60px;
+			top: -45px;
+		}
+	}
+}
+

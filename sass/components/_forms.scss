@@ -1,0 +1,67 @@
+input,
+textarea,
+select {
+    background: #fdfafa;
+    padding: 15px 30px;
+    border: 1px solid #efe7e7;
+    margin-bottom: 30px;
+    border-radius: 30px;
+
+    &:focus {
+        background: #fff;
+        box-shadow: 0px 20px 40px 0px rgba(79, 35, 35, 0.1);
+    }
+}
+
+textarea {
+    height: 200px;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;  
+    // background: #2c3e50;
+    background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Custom Select */
+.pix-select {
+    position: relative;
+    display: flex; 
+}
+
+select {
+    flex: 1;
+    // padding: 0 .5em;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Arrow */
+.pix-select:after {
+    content: "\33";
+    font-family: eleganticons;
+    position: absolute;
+    top: 19%;
+    right: 0;
+    padding-right: 15px;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+    font-size: 24px;
+}
+
+/* Transition */
+.pix-select:hover:after {
+    color: $color__theme;
+}

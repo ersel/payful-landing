@@ -1,0 +1,274 @@
+.job-bord-tabs {
+    padding: 100px 0 90px;
+
+    @media(max-width: 991px) {
+        padding: 60px 0 50px;
+    }
+
+    #pix-tabs-nav {
+        li {
+
+            &:not(:last-child) {
+                margin-right: 13px;
+            }
+
+            a {
+                background: rgba(253, 77, 92, 0.102);
+                color: $color__theme-5;
+                border-radius: 4px;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1px;
+                padding: 6px 24px;
+              
+                  
+
+                &.color--one {
+                    background: rgba(22, 185, 172, 0.102);
+                    color: #16b9ac;
+                }
+                &.color--two {
+                    background: rgba(240, 174, 18, 0.102);
+                    color: #f0ae12;
+                }
+                &.color--three {
+                    background: rgba(105, 46, 254, 0.102);
+                    color: #692efe;
+                }
+
+                &.color--four {
+                    background: rgba(26, 179, 11, 0.102);
+                    color: #1ab30b;
+                }
+                &.color--five {
+                    background: rgba(51, 70, 254, 0.102);
+                    color: #3346fe;
+                }
+
+                i {
+                    margin-right: 5px;
+                    font-size: 16px;
+                    display: inline-block;
+                    vertical-align: -3px;
+                }
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+
+            &.active {
+                a,
+                &:focus {
+                    box-shadow: none;
+                    background: $color__theme-5;
+                    color: #fff;
+                }
+
+                a {
+                    &.color--one {
+                        background: #16b9ac;
+                    }
+                }
+                a {
+                    &.color--two {
+                        background: #f0ae12;
+                    }
+                }
+                a {
+                    &.color--three {
+                        background: #692efe;
+                    }
+                }
+                a {
+                    &.color--four {
+                        background: #1ab30b;
+                    }
+                }
+                a {
+                    &.color--five {
+                        background: #3346fe;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.job-board-tabs-content {
+    .job {
+        background: #fff;
+        box-shadow: 0px 4px 6px 0px rgba(10, 1, 47, 0.08), 0px -4px 0px 0px rgba(105, 46, 254, 0.004);
+        border-radius: 6px;
+        border-top: 4px solid $color__theme-5;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 30px;
+
+        &__logo {
+            padding: 32px 0;
+            text-align: center;
+
+
+            .logo-container {
+                display: flex;
+                height: 85px;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    display: block;
+                }
+
+                img {
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+
+        &__description {
+            padding: 16px 30px 43px;
+            position: relative;
+            text-align: left;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 90%;
+                background: #f0eef8;
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 17px;
+
+            a {
+                color: #322d49;
+
+                &:hover {
+                    color: $color__theme-5;
+                }
+            }
+        }
+
+        &__info {
+            color: #322d49;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        &__location {
+            p {
+                font-size: 13px;
+                margin: 0;
+
+                i {
+                    color: #1ab30b;
+                    font-size: 16px;
+                    margin-right: 5px;
+                    display: inline-block;
+                    vertical-align: -2px;
+                }
+            }
+        }
+
+        &__sallery {
+            display: flex;
+            justify-content: space-between;
+            padding: 17px 30px 14px;
+            border-top: 2px dashed #e3e0ed;
+
+            .sallery {
+                margin: 0;
+                font-size: 20px;
+                color: $color__theme-5;
+            }
+        }
+
+        &__time {
+            p {
+                margin: 0;
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: uppercase;
+
+                i {
+                    margin-right: 5px;
+                    font-size: 14px;
+                    vertical-align: -1px;
+                }
+            }
+        }
+
+        &:hover {
+
+            box-shadow: 0px 40px 50px 0px rgba(10, 1, 47, 0.14), 0px -4px 0px 0px rgba(253, 77, 92, 0.004);
+
+
+        }
+
+        &__color--one {
+            border-top-color: #692efe;
+
+            .job__title {
+                a {
+                    &:hover {
+                        color: #692efe;
+                    }
+                }
+            }
+
+
+            .job__sallery {
+                .sallery {
+                    color: #692efe;
+                }
+            }
+        }
+
+        &__color--two {
+            border-top-color: #16b9ac;
+
+            .job__title {
+                a {
+                    &:hover {
+                        color: #16b9ac;
+                    }
+                }
+            }
+
+
+            .job__sallery {
+                .sallery {
+                    color: #16b9ac;
+                }
+            }
+        }
+
+        &__color--three {
+            border-top-color: #fcbd27;
+
+            .job__title {
+                a {
+                    &:hover {
+                        color: #fcbd27;
+                    }
+                }
+            }
+
+
+            .job__sallery {
+                .sallery {
+                    color: #fcbd27;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,352 @@
+.signin {
+    height: 1050px;
+    position: relative;
+    overflow: hidden;
+
+    .circle {
+        position: absolute;
+        left: -17%;
+        top: -33%;
+    }
+
+    .animate-ball {
+        .ball {
+            background: #fff7f8;
+            &:nth-child(1) {
+                top: 22%;
+                left: -30%;
+            }
+
+            &:nth-child(2) {
+                height: 60px;
+                width: 60px;
+            }
+
+
+            &:nth-child(3) {
+                bottom: 110px;
+                right: auto;
+                left: -20%;
+                height: 80px;
+                width: 80px;
+            }
+
+            &:nth-child(4) {
+                bottom: 30%;
+                right: auto;
+                left: -41%;
+            }
+
+            &:nth-child(5) {
+                top: auto;
+                right: 100px;
+                bottom: -430px;
+            }
+        }
+    }
+}
+
+.signin-from-wrapper {
+    height: 1050px;
+    position: relative;
+    z-index: 22;
+
+    .signin-from-inner {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: 100px;
+        position: relative;
+        z-index: 222;
+
+        .title {
+            font-size: 36px;
+        }
+
+        input:focus {
+            box-shadow: 0px 20px 40px 0px rgba(79, 35, 35, 0.1);
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button {
+            border: 0;
+            padding: 11px 67px;
+            outline: 0;
+            margin-bottom: 33px;
+            margin-top: 55px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 38px;
+            font-size: 18px;
+
+            a {
+                color: $color__theme;
+            }
+        }
+    }
+
+}
+
+.signin-banner {
+    background: #fef8f8;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    max-width: 48%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-two {
+        margin-left: -35px;
+        margin-top: -140px;
+    }
+
+    &.signup-banner {
+        justify-content: flex-start;
+
+        .image-one,
+        .image-two {
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+
+        }
+
+        .image-one {
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+
+        .image-two {}
+
+        .animate-image-inner {
+            position: absolute;
+            width: 100%;
+            height: 450px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    }
+}
+
+.condition {
+    display: flex;
+    align-items: center;
+
+    .styled-checkbox {
+        position: absolute;
+        opacity: 0;
+        height: 20px;
+        width: 16px;
+        margin: 0;
+    }
+
+    span {
+        font-size: 14px;
+    }
+}
+
+
+.styled-checkbox+label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+}
+
+.styled-checkbox+label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #aba8a4;
+    transition: all 0.3s ease-in-out;
+}
+
+.styled-checkbox:hover+label:before {
+    border-color: $color__theme;
+}
+
+.styled-checkbox:checked+label:before {
+    border-color: $color__theme;
+}
+
+.styled-checkbox:checked+label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 9px;
+    background: $color__theme;
+    width: 2px;
+    height: 2px;    
+    box-shadow: 2px 0 0 $color__theme, 4px 0 0 $color__theme, 4px -2px 0 $color__theme, 4px -4px 0 $color__theme, 4px -6px 0 $color__theme, 4px -8px 0 $color__theme;
+    transform: rotate(45deg);
+}
+
+
+.forget-link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+
+    .forget {
+        font-size: 14px;
+        color: #9694a2;
+
+        &:hover {
+            color: $color__theme;
+        }
+    }
+}
+
+
+.singup-social {
+    margin-bottom: 25px;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-bottom: 10px;
+
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 11px 35px;
+            color: #fff;
+            border-radius: 30px;
+            font-size: 16px;
+            width: 180px;
+            text-align: center;
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &:nth-child(1) {
+            a {
+                background: #3b5998;
+            }
+        }
+
+        &:nth-child(2) {
+            a {
+                background: #dd4b39;
+            }
+        }
+
+        &:nth-child(3) {
+            a {
+                background: #55acee;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    .signin-from-wrapper {
+        .signin-from-inner {
+            transform: translateY(-47%);
+
+            .title {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .signup {
+        input {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .signin {
+        height: auto;
+    }
+
+    .signin-from-wrapper {
+        height: auto;
+
+        .signin-from-inner {
+            position: relative;
+            height: auto;
+            z-index: 22;
+            padding: 150px 0 36px;
+            top: 0;
+            transform: translateY(0);
+
+            .title {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .signin-banner {
+        position: relative;
+        max-width: 100%;
+        z-index: 222;
+        padding: 80px 0;
+
+        .image-one {
+            max-width: 200px;
+        }
+
+        .image-two {
+            max-width: 80px;
+            margin-left: -20px;
+            margin-top: -50px;
+        }
+
+        &.signup-banner {
+            height: 350px;
+
+            .animate-image-inner {
+                height: 200px;
+
+                .image-two {
+                    img {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .signin-from-wrapper {
+        .signin-from-inner {
+            padding: 100px 0 5px;
+        }
+    }
+
+    .signin-banner {
+        &.signup-banner {
+            padding: 50px 0;
+            height: 300px;
+        }
+    }
+
+}

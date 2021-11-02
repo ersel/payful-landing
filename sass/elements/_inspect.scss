@@ -1,0 +1,344 @@
+.inspect {
+    padding: 107px 0 75px;
+    background: #fbfafd;
+}
+
+.performance {
+    background: #faf9fd;
+    padding: 120px 0 125px;
+}
+
+.gp-tab-contentens {
+    .section-heading {
+        margin-bottom: 50px;
+    }
+}
+
+// .pix-tab-navs {
+//     padding-right: 100px;
+// }
+.gp-tabs-navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin-bottom: 20px;
+        border-radius: 4px;
+        padding: 25px 20px 25px 50px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 20px 40px 0px rgba(43, 35, 79, 0.08);
+        border-left: 5px solid $color__theme-2;
+        transition: all 0.3s ease-in-out;
+
+        .acc-btn {
+            color: #322d49;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .content {
+            display: none;
+            padding-top: 14px;
+
+            p {
+                margin-bottom: 22px;
+            }
+        }
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .tab-icon {
+            margin-right: 20px;
+        }
+
+        &.active {
+            .content {
+                display: block;
+            }
+        }
+        
+
+        .more-btn {
+            font-size: 14px;
+            color: #5e5b74;
+            font-weight: 500;
+
+            i {
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+
+            &:hover {
+                color: $color__theme-2;
+            }
+        }
+
+        &.active-tab {
+            padding: 30px 20px 25px 50px;
+
+
+        }
+
+    }
+}
+
+
+.gp-tabs-content {
+    padding: 0;
+    list-style: none;
+    z-index: 22;
+    position: relative;
+
+    .pix-tab-item {
+        display: none;
+        opacity: 0;
+        padding: 37px 50px 40px 0px;
+
+        &.active-tab {
+            display: block;
+            opacity: 1;
+
+            .image-bottom {
+                transform: translateY(0);
+                opacity: 1;
+
+            }
+
+            .image-top {
+                transform: translateY(0);
+                opacity: 1;
+                transition-delay: 0.3s;
+
+            }
+
+            .image-left {
+                // animation: animeZoom 0.5s ease-in-out;
+                opacity: 1;
+                transition-delay: 0.5s;
+                transform: scale(1);
+
+            }
+
+        }
+    }
+
+    .inspect-tab-image {
+        position: relative;
+        height: 510px;
+        width: 610px;
+        margin: 0 auto;
+
+        >div {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .image-top {
+            top: -10px;
+            left: 0;
+            z-index: 2;
+            transform: translateY(-20px);
+        }
+
+        .image-bottom {
+            bottom: -66px;
+            right: -70px;
+            transform: translateY(30px);
+        }
+
+        .image-left {
+            bottom: -30px;
+            left: 50px;
+            transform: scale(0.7);
+        }
+    }
+}
+
+.tab-content-inner {
+    position: relative;
+
+    .animate-shape-one {
+        position: absolute;
+        top: 66%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .animate-shape-two {
+        position: absolute;
+        right: 25px;
+        top: 35%;
+    }
+}
+
+
+@keyframes animBottom {
+    0% {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animeTop {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animeZoom {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .gp-tabs-content {
+        min-height: 480px;
+    }
+}
+
+@media (min-width: 960px) {
+    .gp-tabs-content {
+        min-height: 0;
+    }
+}
+
+
+@keyframes gp-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1200px) {
+    .inspect {
+        padding: 107px 0 120px;
+    }
+
+    .gp-tabs-navigation {
+        margin-bottom: 40px;
+    }
+
+    .gp-tabs-content {
+        .pix-tab-item {
+            padding: 0;
+        }
+
+        .inspect-tab-image {
+            max-width: 100%;
+            height: 450px;
+
+            .image-top {
+                max-width: 450px;
+            }
+
+            .image-bottom {
+                right: 0;
+                max-width: 470px;
+            }
+
+            .image-left {
+                left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .inspect {
+        padding: 75px 0 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gp-tabs-content {
+        .pix-tab-item {
+            padding: 0;
+        }
+
+        .inspect-tab-image {
+            max-width: 400px;
+            height: 290px;
+
+            .image-top {
+                max-width: 340px;
+            }
+
+            .image-bottom {
+                right: 0;
+                max-width: 360px;
+            }
+
+            .image-left {
+                bottom: -60px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 420px) {
+    .gp-tabs-navigation {
+        li {
+            padding: 20px 20px 20px 30px;
+            .acc-btn {
+                font-size: 16px;
+            }
+            &.active-tab {
+                padding: 20px 20px 20px 30px;
+            }
+        }
+    }
+
+    .gp-tabs-content {
+        .inspect-tab-image {
+            width: 300px;
+            height: 190px;
+
+            .image-top {
+                max-width: 260px;
+            }
+
+            .image-bottom {
+                right: 0;
+                max-width: 270px;
+            }
+
+            .image-left {
+                bottom: -60px;
+                width: 140px;
+            }
+        }
+    }
+}

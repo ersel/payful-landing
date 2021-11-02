@@ -1,0 +1,184 @@
+/* Fool-proof @font-face */
+/* Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/ */
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+
+	@font-face {
+		font-family: $font-family;
+		src: url('#{$file-path}.eot');
+		src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+		url('#{$file-path}.woff') format('woff'),
+		url('#{$file-path}.ttf') format('truetype'),
+		url('#{$file-path}.svg##{$font-family}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
+
+
+/* Front */
+@mixin Montserrat-Light {
+	font-family: 'Montserrat-Light', arial, sans-serif;
+	font-weight: 300; font-style: normal;
+}
+
+@mixin Montserrat-Light-Italic {
+	font-family: 'Montserrat-Light-Italic', arial, sans-serif;
+	font-weight: 300; font-style: italic;
+}
+
+@mixin Montserrat-Regular {
+	font-family: 'Montserrat-Regular', arial, sans-serif;
+	font-weight: 400; font-style: normal;
+}
+
+@mixin Montserrat-Regular-Italic {
+	font-family: 'Montserrat-Regular-Italic', arial, sans-serif;
+	font-weight: 400; font-style: italic;
+}
+
+@mixin Montserrat-Bold {
+	font-family: 'Montserrat-Bold', arial, sans-serif;
+	font-weight: 700; font-style: normal;
+}
+
+@mixin Montserrat-Bold-Italic {
+	font-family: 'Montserrat-Bold-Italic', arial, sans-serif;
+	font-weight: 700; font-style: italic;
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin text-field {
+	display: inline-block;
+	outline: none;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	@include rounded();
+	@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+}
+
+@mixin button($color: $red, $text_color: $white) {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	@include rounded();
+	@include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+	color: $text_color !important;
+	font-weight: bold;
+	border: solid 1px darken($color, 18%);
+	background: $color;
+	@include gradient(saturate($color, 15%), darken($color, 15%));
+
+	&:hover {
+		text-decoration: none;
+		background: saturate($color, 10%);
+		@include gradient(saturate($color, 5%), darken($color, 5%));
+	}
+
+	&:active {
+		position: relative;
+		top: 1px;
+		color: saturate($color, 15%);
+		@include gradient(saturate($color, 15%), lighten($color, 15%));
+	}
+}
+
+@mixin rounded($radius: 0.5em) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin gradient($from, $to) {
+	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background: -moz-linear-gradient(top,  $from, $to);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+
+//usage: @include shift([property],[duration],[easing]);
+@mixin shift($property: all, $duration: .3s, $ease: linear){
+	-webkit-transition: $property $duration $ease;
+	-moz-transition: $property $duration $ease;
+	-o-transition: $property $duration $ease;
+	transition: $property $duration $ease;
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+
+@include keyframes(slide-down) {
+	0% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 0;
+	}
+}
+
+.element {
+	width: 100px;
+	height: 100px;
+	background: black;
+	@include animation('slide-down 5s 3');
+}
+
+
+%visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+.visually-hidden {
+	@extend %visuallyhidden;
+}

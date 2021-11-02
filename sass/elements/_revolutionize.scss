@@ -1,0 +1,215 @@
+.revolutionize {
+    padding: 116px 0 30px;
+
+    &-two {
+        padding: 116px 0 30px;
+
+        .bg-angle {
+            background-image: $gradient_background_2;
+        }
+    }
+}
+
+
+.bg-angle {
+    background-image: $gradient_background;
+    max-height: 700px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 200px solid transparent;
+        border-left: 1900px solid #fff;
+        border-bottom: 0px solid transparent;
+    }
+}
+
+/* Tabs */
+#pix-tabs-nav {
+    text-align: center;
+    list-style: none;
+    margin-bottom: 38px;
+    padding: 0;
+
+    li {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        a {
+            color: #f1e8e8;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 11px 27px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+
+            &:hover {
+                background: #fff;
+                color: $color__theme;
+                box-shadow: 0px 20px 30px 0px rgba(176, 70, 70, 0.3);
+            }
+        }
+
+        &.active {
+            a {
+                background: #fff;
+                color: $color__theme;
+                box-shadow: 0px 20px 30px 0px rgba(176, 70, 70, 0.3);
+            }
+        }
+    }
+
+    &.pix-tab-two {
+        li {
+            a {
+                &:hover {
+                    color: $color__theme-2;
+                    box-shadow: 0px 20px 30px 0px rgba(90, 70, 176, 0.3);
+                }
+
+            }
+
+            &.active {
+                a {
+                    color: $color__theme-2;
+                    box-shadow: 0px 20px 30px 0px rgba(90, 70, 176, 0.3);
+                }
+            }
+        }
+    }
+}
+
+
+
+#pix-tabs-content {
+    .content {
+        text-align: center;
+        position: relative;
+
+        img {
+            background-color: rgb(225, 213, 213);
+            box-shadow: 0px 60px 100px 0px rgba(79, 35, 35, 0.2);
+            border-radius: 10px;
+        }
+
+        .shape-shadow {
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            opacity: 0.4;
+            box-shadow: 0px 60px 100px 0px rgba(79, 35, 35, 0.2);
+            height: 100px;
+            max-width: 73%;
+            position: absolute;
+            bottom: -40px;
+            width: 100%;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &.color-two {
+            img {
+                box-shadow: 0px 60px 100px 0px rgba(43, 35, 79, 0.2);
+            }
+
+            .shape-shadow {
+                box-shadow: 0px 60px 100px 0px rgba(43, 35, 79, 0.2);
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 991px) {
+
+    .revolutionize,
+    .revolutionize-two {
+        padding: 76px 0 30px;
+    }
+
+    #pix-tabs-content {
+        .content.color-two {
+            img {
+                box-shadow: 0px 40px 50px 0px rgba(43, 35, 79, 0.2);
+            }
+
+            .shape-shadow {
+                box-shadow: 0px 40px 50px 0px rgba(43, 35, 79, 0.2);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    #pix-tabs-content {
+        .content {
+
+            img {
+                box-shadow: 0px 40px 50px 0px rgba(79, 35, 35, 0.2);
+            }
+
+            .shape-shadow {
+                bottom: -30px;
+                box-shadow: 0px 40px 50px 0px rgba(79, 35, 35, 0.2);
+            }
+        }
+    }
+
+    
+    #pix-tabs-nav {
+        li {
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #pix-tabs-nav {
+        margin: 0;
+    }
+
+    #pix-tabs-nav {
+        li {
+            margin-right: 3px;
+            a {
+                font-size: 14px;
+                padding: 6px 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    #pix-tabs-nav {
+        margin-bottom: 20px;
+        li {            
+
+            a {
+                margin-bottom: 10px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+}

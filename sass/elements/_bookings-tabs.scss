@@ -1,0 +1,310 @@
+
+.bookings-tabs {
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 40px 70px 0px rgba(54, 33, 5, 0.08);
+
+    #pix-tabs-nav {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            flex: 1;
+            background: #fff6ec;
+            margin-right: 0;
+
+            a {
+                display: block;
+                box-shadow: none;
+                border-radius: 0;
+                color: #a18868;
+                margin: 0;
+                border-top: 4px solid transparent;
+
+                &:hover {
+                    color: $color__theme-3;
+                    border-color: $color__theme-3;
+                }
+            }
+
+            &.active {
+                a {
+                    color: $color__theme-3;
+                    border-color: $color__theme-3; 
+                }
+            }
+        }
+    }
+  }
+  
+
+
+.booking-wrapper {
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    z-index: 999;
+}
+
+.booking-wrapper .booking-info {
+    width: calc(20.4% - 2%);
+    margin-right: 2%;
+}
+
+.booking-wrapper .booking-info input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    outline: 0;
+    border-radius: 3px;
+    color: #999;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.booking-wrapper .booking-info input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.booking-wrapper .booking-info input:-ms-input-placeholder {
+    color: #999;
+}
+
+.booking-wrapper .booking-info input::-ms-input-placeholder {
+    color: #999;
+}
+
+.booking-wrapper .booking-info input::placeholder {
+    color: #999;
+}
+
+.booking-wrapper .booking-info:last-child {
+    margin-right: 0;
+}
+
+.booking-wrapper .booking-info .saaspik-btn {
+    display: block;
+    width: 100%;
+}
+
+.booking-wrapper .booking-info .saaspik-select ul {
+    padding: 20px;
+    -webkit-box-shadow: 0px 20px 20px 0px rgba(153, 153, 153, 0.1);
+    box-shadow: 0px 20px 20px 0px rgba(153, 153, 153, 0.1);
+}
+
+.booking-wrapper .booking-info .saaspik-select ul li {
+    padding: 0;
+}
+
+.booking-wrapper .booking-info .saaspik-select ul li:hover {
+    color: #8e42f7;
+    background: transparent;
+}
+
+/* Language Dropdown */
+.saaspik-dropdown {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.saaspik-dropdown ul {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.saaspik-dropdown>ul {
+    position: absolute;
+    background: #fff;
+    left: 0;
+    top: 50px;
+    border-radius: 3px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.saaspik-dropdown>ul li {
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+    padding: 3px 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.saaspik-dropdown>ul li:first-child {
+    border-radius: 5px 5px 0 0;
+    background-clip: padding-box;
+}
+
+.saaspik-dropdown>ul li:last-child {
+    border-radius: 0 0 5px 5px;
+    background-clip: padding-box;
+    border-bottom: none;
+}
+
+.saaspik-dropdown>ul li:hover {
+    background: #E0E6EB;
+}
+
+.saaspik-dropdown>label {
+    display: inline-block;
+    vertical-align: -9px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.saaspik-dropdown>label span {
+    white-space: nowrap;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    color: #333;
+}
+
+.saaspik-dropdown>label i {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #333;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.saaspik-dropdown label {
+    margin: 0;
+}
+
+.saaspik-dropdown input {
+    display: none;
+}
+
+.saaspik-dropdown input:checked~ul {
+    opacity: 1;
+}
+
+.saaspik-dropdown input:checked~ul li {
+    cursor: pointer;
+}
+
+.saaspik-select {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 325px;
+    color: #cccccc;
+    vertical-align: middle;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.saaspik-select .placeholder {
+    position: relative;
+    display: block;
+    z-index: 1;
+    padding: 11px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #ede9e4;
+    color: #626c7b;
+    font-weight: 500;
+}
+
+.saaspik-select .placeholder:hover {
+    color: #8e42f7;
+}
+
+.saaspik-select .placeholder:after {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: 'themify';
+    content: "\e64b";
+    z-index: 10;
+}
+
+.saaspik-select.is-open .placeholder:after {
+    content: "\e648";
+}
+
+.saaspik-select.is-open ul {
+    display: block;
+}
+
+.saaspik-select.select--white .placeholder {
+    background: #fff;
+    color: #999;
+}
+
+.saaspik-select.select--white .placeholder:hover {
+    background: #fafafa;
+}
+
+.saaspik-select ul {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    z-index: 100;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.saaspik-select ul li {
+    display: block;
+    text-align: left;
+    padding: 10px 15px;
+    color: #999;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.saaspik-select ul li:hover {
+    background: #8e42f7;
+    color: #fff;
+}

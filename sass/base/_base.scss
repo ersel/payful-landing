@@ -1,0 +1,208 @@
+body {
+	font-family: $font__primary;
+	font-size: 16px;
+	line-height: 28px;
+	color: $color__body;
+	overflow-x: hidden;
+}
+
+
+svg {
+	display: block;
+}
+
+a,
+button,
+input,
+textarea,
+button,
+select {
+	transition: all 0.3s ease-in-out;
+}
+
+button {
+	cursor: pointer;
+	outline: 0;
+}
+
+input,
+textarea,
+select {
+	width: 100%;
+	padding: 10px 12px;
+	outline: 0;
+}
+
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font__heading;
+	margin-top: 0;
+	font-weight: 600;
+	color: $color__primary;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.pr {
+	position: relative;
+}
+
+.pt-7 {
+	padding-top: 70px;
+}
+
+
+.container-wrap {
+	max-width: 95%;
+	margin: 0 auto;
+	border-radius: 20px;
+	position: relative;
+
+	&.bg-color-one {
+		background-color: #f6faf8;
+	}
+
+	&.bg-color-two {
+		background-color: #d9e6ff;
+	}
+
+	&.bg-footer-color {
+		background-color: #1d2146;
+	}
+}
+
+section {
+	position: relative;
+}
+
+.mw-none {
+	max-width: unset !important;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+@media (min-width: 991px) {
+	.pr-85 {
+		padding-right: 85px;
+	}
+
+	.pl-85 {
+		padding-left: 85px;
+	}
+}
+
+.section-small {
+	margin-bottom: 80px;
+
+	.title {
+		font-size: 20px;
+		font-weight: 500;
+	}
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.mt-60 {
+	margin-top: 60px;
+}
+
+.section-padding {
+	padding: 100px 0;
+}
+
+.no-scroll {
+	overflow-y: hidden !important;
+}
+
+.container-wide {
+	max-width: 1700px;
+	padding: 0 15px;
+	margin: 0 auto;
+
+}
+
+.gutters-10 > [class*=col-] {
+	padding: 0 5px;
+
+}
+
+/*
+	Flaticon icon font: Flaticon
+	Creation date: 13/07/2019 13:19
+*/
+
+
+@font-face {
+	font-family: "Flaticon";
+	src: url("./Flaticon.eot");
+	src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/Flaticon.woff") format("woff"),
+	url("../fonts/Flaticon.ttf") format("truetype"),
+	url("../fonts/Flaticon.svg#Flaticon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	@font-face {
+		font-family: "Flaticon";
+		src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+	}
+}
+
+.fi:before {
+	display: inline-block;
+	font-family: "Flaticon";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.flaticon-google-play:before {
+	content: "\f100";
+}
+
+.flaticon-apple-logo:before {
+	content: "\f101";
+}
+
+$font-Flaticon-google-play: "\f100";
+$font-Flaticon-apple-logo: "\f101";
+
+
+@media (max-width: 991px) {
+	.pix-order-two {
+		order: 2;
+	}
+
+	.pix-order-one {
+		order: 1;
+	}
+}

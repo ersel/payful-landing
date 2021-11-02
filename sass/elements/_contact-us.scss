@@ -1,0 +1,44 @@
+.contactus {
+    padding: 120px 0;
+}
+
+.gmap3-area {
+    height: 500px;
+}
+
+.contact-infos {
+    .contact-info {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+
+        &:first-child {
+            border-bottom: 1px solid #efe7e7;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .info {
+
+            i {
+                margin-right: 10px;
+            }
+            &.phone {
+                color: $color__theme;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .contactus {
+        padding: 80px 0 80px;
+    }
+}

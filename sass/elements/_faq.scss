@@ -1,0 +1,200 @@
+.faq-section {
+    padding-top: 115px;
+}
+
+.faq-section-two {
+    padding-top: 75px;
+}
+
+.faqs {
+    padding: 120px 0;
+}
+
+.card {
+    border: 0;
+    background: transparent;
+
+    .card-header {
+        background-color: transparent;
+        border: 0;
+        border-radius: 6px;
+
+        .btn-link {
+            padding: 0;
+            color: $color__primary;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+
+    .card-body {
+        padding: 0;
+
+        p {          
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+
+.faq {
+    position: relative;
+    z-index: 2;
+    .card {
+        border: 0;
+        background: transparent;
+        margin-bottom: 20px;
+        border: 1px solid #efe7e7;
+
+        .card-header {
+            padding: 0;
+
+            h5 {
+                position: relative;
+                margin: 0;
+            }
+
+            .btn-link {
+                color: $color__primary;
+                font-size: 20px;
+                font-weight: 500;
+                text-decoration: none;
+                white-space: normal;
+                text-align: left;
+                width: 100%;
+                padding: 18px 40px;
+
+                &:before {
+                    content: "\32";
+                   
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 40px;
+                    z-index: 9;
+                    font-family: eleganticons;
+                    transition: all 0.5s;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                    color: $color__theme;
+                }
+
+
+                &.collapsed {
+                    &:before {
+                        content: "\33";
+                        color: #aaaaaa;
+                    }                  
+                }
+                
+           
+
+            }
+        }
+
+        .card-body {
+            padding: 0 40px 40px;
+
+            p {                
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+
+        &.active {
+            box-shadow: 0px 60px 100px 0px rgba(79, 35, 35, 0.1);
+
+            
+        }
+
+
+    }
+}
+
+.faq-forms {
+    padding-top: 120px;
+
+    .section-title {
+        margin-bottom: 50px;
+    }
+}
+
+.faq-forms {
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 991px) {
+    #faqs {
+        padding: 80px 0 50px;
+    }
+
+    .faq-two {
+        margin-bottom: 30px;
+    }
+
+    .faq-section-two {
+        padding-top: 65px;
+    }
+
+    .faq-section {
+        padding-top: 75px;
+    }
+
+    .faqs {
+        padding: 80px 0;
+    }
+
+    .faq-forms {
+        padding-top: 78px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #faqs {
+        padding: 50px 0 20px;
+    }
+
+
+    .faq {
+        .card {
+            .card-header {
+                h5:before {
+                    right: 20px;
+                }
+                .btn-link {
+                    padding: 18px 20px;
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media (max-width: 576px) {
+    .faq {
+        .card {
+            .card-header {
+                .btn-link {
+                    padding: 18px 30px 18px 20px;
+                    font-size: 18px;
+                }
+
+                h5:before {
+                    right: 10px;
+                }
+            }
+
+            .card-body {
+                padding: 5px 20px 25px;
+            }
+        }
+    }  
+
+}

@@ -1,0 +1,211 @@
+.download {
+	padding: 120px 0;
+	overflow: hidden;
+}
+
+
+.download-wrapper {
+	padding-top: 115px;
+
+	.title {
+		font-size: 34px;
+		font-weight: 700;
+		margin-bottom: 25px;
+	}
+
+	p {
+		margin-bottom: 40px;
+	}
+}
+
+.download-feature-image {
+	position: relative;
+
+	.image-one {
+		margin-left: 185px;
+		z-index: 22;
+		position: relative;
+	}
+
+	.image-two {
+		position: absolute;
+		right: 10px;
+		top: -20px;
+	}
+
+	svg {
+		position: absolute;
+		z-index: -1;
+		top: 43px;
+		right: 0;
+	}
+}
+
+.app-btn-wrapper {
+	.app-btn {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
+
+/**
+Download Two
+ */
+.download-two {
+	.container-wrap {
+		overflow: hidden;
+	}
+}
+
+.download-wrapper-two {
+	padding: 130px 0;
+
+	.title {
+		font-size: 60px;
+		line-height: 1.2;
+		font-weight: 700;
+
+		@media(max-width: 768px) {
+			font-size: 40px;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+		color: #76747f;
+	}
+}
+
+.download-feature-image-two {
+	position: relative;
+	height: 100%;
+
+	@media(max-width: 991px) {
+		display: none;
+	}
+
+	img {
+		position: absolute;
+		bottom: -160px;
+
+		&.image-one {
+			left: 0;
+			z-index: 2;
+		}
+
+		&.image-two {
+			left: 215px;
+			bottom: -240px;
+		}
+	}
+}
+
+.section-animate-element {
+	> div {
+		position: absolute;
+	}
+
+	.leaf-top {
+		top: -20px;
+		left: 40px;
+	}
+
+	.leaf-bottom {
+		right: 15px;
+		bottom: -20px;
+	}
+
+	.ball {
+		left: 5%;
+		top: 50%;
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	.triangle {
+		right: 8%;
+		top: 90px;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.download-feature-image .image-one {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.download-feature-image {
+		svg {
+			right: auto;
+			left: 0;
+		}
+
+		.image-one {
+			margin-left: 0;
+		}
+
+		.image-two {
+			right: 25%;
+		}
+	}
+
+	.download {
+		padding: 100px 0;
+	}
+
+	.signup-section {
+		padding: 70px 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.download-feature-image {
+		.image-two {
+			left: 150px;
+			right: auto;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.download-feature-image {
+		svg {
+			top: -50px;
+		}
+
+		.image-one {
+			margin-left: 0;
+			max-width: 200px;
+		}
+
+		.image-two {
+			right: auto;
+			top: -18px;
+			max-width: 270px;
+			left: 25%;
+		}
+	}
+
+	.download-wrapper {
+		padding-top: 50px;
+	}
+}
+
+
+@media (max-width: 480px) {
+	.download-feature-image {
+		.image-two {
+			right: auto;
+			left: 15%;
+		}
+	}
+
+	.app-btn-wrapper .app-btn:not(:last-child) {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+}

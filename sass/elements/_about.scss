@@ -1,0 +1,163 @@
+.about {
+    padding-top: 120px;
+}
+
+.about-two {
+    padding-bottom: 120px;
+}
+
+.about-content {
+    padding-right: 130px;
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    .singiture {
+        h4 {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.about-content-two {
+    .section-title {
+        margin-bottom: 22px;
+
+        .title {
+            font-size: 34px;
+            line-height: 44px;
+            color: #322d49;
+            font-weight: 600;
+        }
+    }
+
+    .description {
+        margin-bottom: 40px;
+    }
+
+    .about-user {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            margin-right: 20px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .user-info {
+            flex: 2;
+
+            .name {
+                font-size: 20px;
+                font-weight: 500;
+                color: #322d49;
+                margin: 0;
+            }
+
+            .designation {
+                font-size: 16px;
+                color: #5e5b74;
+            }
+        }
+    }
+}
+
+.about-tax {
+    padding: 60px 0 240px;
+    position: relative;   
+}
+
+.about-video-wrapper {
+    .video-thumbnail {
+        position: relative;
+
+        >img {
+            border-radius: 10px;
+        }
+
+        .dot-shape {
+            position: absolute;
+            display: block;
+            top: -50px;
+            left: -60px;
+            z-index: -1;
+        }
+    }
+}
+
+.about-tax-content {
+    padding-left: 50px;
+
+    .section-title {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    .list-items {
+        margin-bottom: 37px;
+        li {
+            padding-left: 25px;
+            &:before {
+                content: "\3b";
+                color: $color__theme-4;
+                top: -1px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .about-content-two .section-title .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about {
+        padding-top: 76px;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+
+    .about-thumb {
+        margin-top: 30px;
+    }
+
+    .about-two {
+        padding-bottom: 80px;
+    }
+
+    .about-content-two {
+        margin-top: 40px;
+    }
+
+    .about-tax {
+        padding: 60px 0 80px;       
+    }
+
+    .about-tax-content {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,58 @@
+.list-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        font-size: 16px;
+        line-height: 36px;
+        font-weight: 500;
+        color: $color__primary;
+        padding-left: 36px;
+        position: relative;
+
+        &:before {
+            content: "\4e";
+            font-family: eleganticons;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $color__theme;
+        }
+    }
+
+    &.color-two {
+        li {
+            &:before {
+                color: $color__theme-2;
+            }
+        }
+    }
+
+    &.list-with-icon {
+
+        li {
+            &:before {
+                display: none;
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $color__theme-2;
+            }
+        }
+    }
+
+	&.list-icon-arrow {
+		li {
+			padding-left: 25px;
+			&:before {
+				content: "\24";
+				color: $color__theme-6;
+			}
+		}
+	}
+}

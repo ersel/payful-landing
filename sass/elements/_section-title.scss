@@ -1,0 +1,192 @@
+.section-title {
+	margin-bottom: 70px;
+
+	.sub-title {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: $color__theme;
+		letter-spacing: 3px;
+	}
+
+	.title {
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 1.4;
+
+		span {
+			color: $color__theme
+		}
+	}
+
+	.title-two {
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 44px;
+		max-width: 930px;
+		margin: 0 auto;
+
+		span {
+			color: $color__theme;
+		}
+	}
+
+
+	&.style-two {
+		.title {
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 30px;
+			margin-top: 28px;
+		}
+
+		.sub-title {
+			margin: 0;
+			line-height: 1.8;
+		}
+
+		&.title-light {
+			.sub-title {
+				letter-spacing: 5px;
+				font-weight: 400;
+
+			}
+
+			.sub-title, .title {
+				color: #fff;
+			}
+
+			p {
+				color: #fff;
+			}
+		}
+	}
+
+	&.style-three {
+		.sub-title {
+			color: $color__theme-4;
+			letter-spacing: 5px;
+			font-weight: 400;
+			margin: 0;
+			line-height: 1.8;
+		}
+
+		span {
+			font-weight: 300;
+			color: $color__primary;
+		}
+	}
+
+	&.dark-title {
+
+		.sub-title,
+		.title {
+			color: #fff;
+		}
+	}
+
+	&.color-two {
+		.sub-title {
+			color: $color__theme-2;
+		}
+	}
+
+	&.style-four {
+		.title {
+			font-size: 40px;
+			font-weight: 700;
+			margin-bottom: 12px;
+
+			@media(max-width: 991px) {
+				font-size: 32px;
+			}
+		}
+
+		.sub-title {
+			font-size: 14px;
+			font-weight: 300;
+			letter-spacing: 3px;
+			color: #7d7a8b;
+			text-transform: uppercase;
+			line-height: 1.4;
+		}
+	}
+
+	&.style-five {
+		margin-bottom: 55px;
+
+		.sub-title {
+			color: $color__theme-6;
+			font-size: 14px;
+			letter-spacing: 4px;
+			font-weight: 500;
+			margin-bottom: 13px;
+		}
+
+		.title {
+			font-size: 40px;
+			color: #1a133b;
+			font-weight: 600;
+
+			@media(max-width: 991px) {
+				font-size: 32px;
+			}
+
+			@media(max-width: 768px) {
+				font-size: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.section-title {
+		margin-bottom: 50px;
+
+		.title {
+			font-size: 32px;
+		}
+
+		p {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	.section-title {
+		&.style-two {
+
+
+			p {
+				margin-top: 13px;
+
+				br {
+					display: none;
+				}
+			}
+		}
+
+		.title-two {
+			font-size: 26px;
+			line-height: 36px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.section-title {
+
+		.title {
+			font-size: 28px;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+

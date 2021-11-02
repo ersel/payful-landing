@@ -1,0 +1,189 @@
+.callback {
+    background: #fcfafb;
+    position: relative;
+    padding-bottom: 65px;
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 115px solid transparent;
+        border-left: 1900px solid #fff;
+        border-bottom: 150px solid #fff;
+    }
+
+    .particale-element {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        li {
+            position: absolute;
+
+            &:nth-child(1) {
+                top: -20%;
+                left: 40px;
+                animation: jumping 5s infinite linear;
+            }
+
+            &:nth-child(2) {
+                top: 12%;
+                left: 30%;
+                background: #f7cb61;
+                height: 15px;
+                width: 15px;
+                border-radius: 30px;
+                animation: animationFramesLeft 20s infinite linear;
+            }
+
+
+            &:nth-child(3) {
+                left: 8%;
+                top: 35%;
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-right: 20px solid #b29ff7;
+                animation: animationFramesTwo 20s infinite linear;
+            }
+
+            &:nth-child(4) {
+                bottom: 38%;
+                left: 13%;
+                background: #43d254;
+                height: 15px;
+                width: 15px;
+                border-radius: 30px;
+                animation: animationFramesRight 20s infinite linear;
+
+            }
+            &:nth-child(5) {
+                bottom: 0%;
+                left: 11%;
+                background: #fcf2f9;
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                animation: wave 3s infinite linear;
+
+            }
+
+            &:nth-child(6) {
+                bottom: 9%;
+                left: 41%;
+                z-index: 1;
+                animation: wave 6s infinite linear;
+            }
+            &:nth-child(7) {
+                right: 12%;
+                top: -19%;
+                background: #f9f3f7;
+                height: 600px;
+                width: 600px;
+                border-radius: 50%;
+                animation: wave 8s infinite linear;
+            }
+            &:nth-child(8) {
+                right: 9%;
+                top: -22%;
+                background: rgba(83, 81, 186, 0.039);
+                height: 360px;
+                width: 360px;
+                border-radius: 50%;
+                animation: wave 6s infinite linear;
+            }
+
+
+
+        }
+
+
+
+    }
+}
+
+
+
+.call-back-content {
+    padding: 190px 0 190px;
+
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+.call-back-forms {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 8.682px 49.24px 80px 0px rgba(48, 11, 33, 0.1);
+    padding: 60px 50px;
+    max-width: 570px;
+    border-top: 5px solid $color__theme-4;
+    transform: translateY(-60px);
+    z-index: 2;
+    position: relative;
+
+    .title {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 35px;
+    }
+
+    select {
+        padding: 0 20px;
+        outline: 0;
+    }
+
+    label {
+        font-weight: 500;
+    }
+
+    input,
+    select {
+        background: #f9f5f7;
+        border: 2px solid #f9f5f7;
+        height: 56px;
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 20px;
+
+        &:focus {
+            background: transparent;
+            border-color: #efbbd9;
+            box-shadow: none;
+        }
+    }
+
+    button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .call-back-content {
+        padding: 100px 0;
+    }
+
+
+    .callback {
+        .particale-element  {
+            li {
+                &:nth-child(6) {
+                    bottom: 70px;
+                    left: 25%;
+                }
+            }
+        }
+    }
+}
