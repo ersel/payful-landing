@@ -64,24 +64,6 @@
   }
 }
 
-.element {
-  width: 100px;
-  height: 100px;
-  background: black;
-  -webkit-animation: slide-down 5s 3;
-  animation: slide-down 5s 3;
-}
-
-.visually-hidden {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -141,39 +123,8 @@ img {
   height: auto;
 }
 
-.pr {
-  position: relative;
-}
-
-.pt-7 {
-  padding-top: 70px;
-}
-
-.container-wrap {
-  max-width: 95%;
-  margin: 0 auto;
-  border-radius: 20px;
-  position: relative;
-}
-
-.container-wrap.bg-color-one {
-  background-color: #f6faf8;
-}
-
-.container-wrap.bg-color-two {
-  background-color: #d9e6ff;
-}
-
-.container-wrap.bg-footer-color {
-  background-color: #1d2146;
-}
-
 section {
   position: relative;
-}
-
-.mw-none {
-  max-width: unset !important;
 }
 
 @media (min-width: 1200px) {
@@ -189,41 +140,6 @@ section {
   .pl-85 {
     padding-left: 85px;
   }
-}
-
-.section-small {
-  margin-bottom: 80px;
-}
-
-.section-small .title {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.mt-40 {
-  margin-top: 40px;
-}
-
-.mt-60 {
-  margin-top: 60px;
-}
-
-.section-padding {
-  padding: 100px 0;
-}
-
-.no-scroll {
-  overflow-y: hidden !important;
-}
-
-.container-wide {
-  max-width: 1700px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.gutters-10 > [class*=col-] {
-  padding: 0 5px;
 }
 
 /*
@@ -243,29 +159,6 @@ section {
     font-family: "Flaticon";
     src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
   }
-}
-
-.fi:before {
-  display: inline-block;
-  font-family: "Flaticon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-.flaticon-google-play:before {
-  content: "\f100";
-}
-
-.flaticon-apple-logo:before {
-  content: "\f101";
 }
 
 @media (max-width: 991px) {
@@ -339,7 +232,7 @@ section {
 
 .pix-btn.btn-two:hover {
   background: transparent;
-  color: #f97bc5;
+  color: #7b7df9;
   border-color: #f97bc5;
 }
 
