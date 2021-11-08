@@ -180,7 +180,7 @@ section {
 .pix-btn {
   padding: 8px 30px;
   background: #3d8af7;
-  border-radius: 30px;
+  border-radius: 10px;
   display: inline-block;
   font-size: 14px;
   color: #fff;
@@ -5066,7 +5066,14 @@ select {
 
 .saaspik-icon-box-wrapper {
   margin-bottom: 30px;
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content:center;
+  
+  }
+
 }
+
 
 .saaspik-icon-box-wrapper.style-one {
   margin-top: 10px;
@@ -15017,7 +15024,7 @@ Download Two
   ##  Footer
   --------------------------------------------------------------*/
 #footer {
-  background: #fdf8f8;
+  
 }
 
 #footer .footer-inner {
