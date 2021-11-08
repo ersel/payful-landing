@@ -185,10 +185,21 @@ section {
   font-size: 14px;
   color: #fff;
   font-weight: 600;
-  -webkit-box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.3);
+  
 }
-
+.login-btn{
+  background: #f6f7fc;
+  font-weight: bold;
+font-family: "Poppins", serif; 
+  font-size: 14px;
+}
+.score-btn{
+  height: 60px;
+  line-height: 45px;
+}
+.score-btn-last{
+  width: 100%;
+}
 .pix-btn.submit-btn {
   border: 0;
   padding: 11px 35px;
@@ -2628,7 +2639,9 @@ select {
 
 .pix-header-fixed .site-logo .main-logo {
   display: none;
+
 }
+
 
 .pix-header-fixed .site-logo .sticky-logo {
   display: block;
@@ -2840,7 +2853,7 @@ select {
     background: #3d8af7;
   }
   .header-inner .site-mobile-logo img {
-    max-height: 30px;
+    max-height: 70px;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -5047,6 +5060,13 @@ select {
   --------------------------------------------------------------*/
 .featured {
   padding-top: 32px;
+  background: #f6f7fc;
+  padding-bottom: 60px;
+}
+.featured .title{
+  font-size: 17px;
+  color: #777777;
+  font-weight: bold;
 }
 
 .featured-seven {
@@ -5066,11 +5086,7 @@ select {
 
 .saaspik-icon-box-wrapper {
   margin-bottom: 30px;
-  @media (max-width: 900px) {
-    display: flex;
-    justify-content:center;
   
-  }
 
 }
 
@@ -5078,6 +5094,17 @@ select {
 .saaspik-icon-box-wrapper.style-one {
   margin-top: 10px;
 }
+
+@media (max-width: 900px) {
+  
+.saaspik-icon-box-wrapper.style-one {
+    display: flex;
+    justify-content:center;
+}
+  
+  }
+
+
 
 .saaspik-icon-box-wrapper.style-one .saaspik-icon-box-icon {
   margin-bottom: 40px;
@@ -5348,6 +5375,9 @@ select {
 
 .saaspik-icon-box-wrapper.style-six .pixsass-icon-box-content .pixsass-icon-box-title a:hover {
   color: #7052fb;
+}
+.title-top{
+  font-size: 55px;
 }
 
 .saaspik-icon-box-wrapper.style-six .pixsass-icon-box-content p {
@@ -15023,9 +15053,12 @@ Download Two
 /*--------------------------------------------------------------
   ##  Footer
   --------------------------------------------------------------*/
-#footer {
-  
+.footer {
+  text-align: center;
+  padding: 2%;
+
 }
+
 
 #footer .footer-inner {
   padding: 116px 0 62px;
@@ -15568,12 +15601,12 @@ Download Two
 
 .res-circle {
   /* (A) PERCENTAGE WIDTH & BORDER RADIUS */
-  width: 30%;
+  width: 50%;
   border-radius: 50%;
 
 
   /* (B) BACKGROUND COLOR */ 
-  background: #bcd6ff;
+  background: #fff;
  
   /* (C) NECESSARY TO POSITION TEXT BLOCK */
   line-height: 0;
@@ -15594,10 +15627,13 @@ Download Two
   bottom: 40%;
   width: 100%;
   text-align: center;
+  font-size: 18px;
+
  
   /* (E2) THE FONT - NOT REALLY IMPORTANT */
-  font-family: arial, sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: bold;
+  color: #777;
 }
 
 
@@ -15615,7 +15651,15 @@ Download Two
   display: flex;
   flex-direction: column;
   align-items: center;
+    background: #f6f7fc;
+    width: 30%;
+    border-radius: 20px;
 }
+
+@media (max-width: 991px) {
+  .card1 {
+    width: 100%;
+  }
 
 
 
