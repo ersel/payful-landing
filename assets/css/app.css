@@ -2988,6 +2988,7 @@ select {
 
 .banner.banner-one .promo-mockup img {
   max-width: 920px;
+      margin-bottom: -154px;
   -webkit-animation: zoom 4s infinite ease;
           animation: zoom 4s infinite ease;
   -webkit-animation-direction: alternate;
