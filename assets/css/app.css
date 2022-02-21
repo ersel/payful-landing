@@ -2985,7 +2985,9 @@ select {
 .banner.banner-one .promo-mockup {
   margin-left: -120px;
 }
-
+.img-footer{
+  margin-bottom: 10px;
+}
 .banner.banner-one .promo-mockup img {
   max-width: 920px;
       margin-bottom: -154px;
