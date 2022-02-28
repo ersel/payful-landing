@@ -2065,14 +2065,14 @@ select {
   ##  Header
   --------------------------------------------------------------*/
 .site-header {
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 9999;
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 .site-header .header-inner {
@@ -2985,9 +2985,12 @@ select {
 .banner.banner-one .promo-mockup {
   margin-left: -120px;
 }
-
+.img-footer{
+  margin-bottom: 10px;
+}
 .banner.banner-one .promo-mockup img {
   max-width: 920px;
+      margin-bottom: -154px;
   -webkit-animation: zoom 4s infinite ease;
           animation: zoom 4s infinite ease;
   -webkit-animation-direction: alternate;
@@ -4410,6 +4413,7 @@ select {
 @media (min-width: 991px) and (max-width: 1024px) {
   .banner.banner-one {
     height: 700px;
+  
   }
   .banner.banner-one .banner-content-wrap {
     -webkit-transform: translateY(60%);
@@ -4426,11 +4430,16 @@ select {
 }
 
 @media (max-width: 991px) {
+   .banner.banner-one {
+    margin-top: -50px;
+
+   }
   .banner.banner-one .banner-content-wrap {
     -webkit-transform: translateY(20%);
         -ms-transform: translateY(20%);
             transform: translateY(20%);
   }
+
   .banner.banner-one .banner-content {
     margin-bottom: 50px;
   }
@@ -5379,6 +5388,7 @@ select {
 .title-top{
   font-size: 55px;
 }
+
 
 .saaspik-icon-box-wrapper.style-six .pixsass-icon-box-content p {
   margin-bottom: 35px;
