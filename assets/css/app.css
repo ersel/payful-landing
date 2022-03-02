@@ -4442,6 +4442,8 @@ select {
 
   .banner.banner-one .banner-content {
     margin-bottom: 50px;
+    margin: 20px;
+    margin-top: 50px;
   }
   .banner.banner-one .banner-content .banner-title {
     font-size: 40px;
@@ -5390,6 +5392,7 @@ select {
 }
 
 
+
 .saaspik-icon-box-wrapper.style-six .pixsass-icon-box-content p {
   margin-bottom: 35px;
 }
@@ -5736,6 +5739,9 @@ select {
   }
   .featured-six {
     padding-top: 50px;
+  }
+  .title-top {
+    font-size: 30px;
   }
 }
 
