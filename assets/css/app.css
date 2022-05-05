@@ -200,6 +200,22 @@ font-family: "Poppins", serif;
 .score-btn-last{
   width: 100%;
 }
+
+.blog-btn{
+  height: 60px;
+  line-height: 45px;
+  color:#333;
+  cursor: pointer;
+  background: #c4c5ca;
+}
+
+.blog-btn:hover{
+  color: #3d8af7 !important;
+}
+.blog-btn-last{
+  width: 100%;
+}
+
 .pix-btn.submit-btn {
   border: 0;
   padding: 11px 35px;
